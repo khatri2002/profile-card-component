@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Profile card component</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+      .main {
+        font-family: "Kumbh Sans", serif;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Primary
+              "dark-cyan": "hsl(185, 75%, 39%)",
+              "very-dark-desaturated-blue": "hsl(229, 23%, 23%)",
+              "dark-grayish-blue": "hsl(227, 10%, 46%)",
+
+              // Neutral
+              "dark-gray": "hsl(0, 0%, 59%)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <main
+      class="main relative overflow-hidden min-h-screen bg-dark-cyan before:content-[''] before:bg-[url('./assets/images/bg-pattern-top.svg')] before:w-[978px] before:h-[978px] before:absolute before:bg-no-repeat before:bg-contain before:right-[51%] before:bottom-[19rem] after:content-[''] after:bg-[url('./assets/images/bg-pattern-bottom.svg')] after:w-[978px] after:h-[978px] after:absolute after:bg-no-repeat after:bg-contain after:left-[51%] after:-bottom-[34rem] flex justify-center items-center"
+    >
+      <div class="z-10 bg-white rounded-xl shadow-2xl">
+        <div
+          class="bg-[url(./assets/images/bg-pattern-card.svg)] w-[350px] h-[140px] relative rounded-t-xl"
+        >
+          <img
+            class="absolute w-[6.5rem] h-[6.5rem] rounded-full -bottom-[3.25rem] left-0 right-0 mx-auto border-[5px] border-white"
+            src="./assets/images/image-victor.jpg"
+            alt="image-victor"
+          />
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="mt-[4.25rem] flex items-center gap-x-2 text-lg">
+            <h1 class="text-very-dark-desaturated-blue font-semibold">
+              Victor Crest
+            </h1>
+            <span class="text-dark-grayish-blue">26</span>
+          </div>
+          <span class="text-sm mt-1 text-dark-grayish-blue">London</span>
+          <hr class="w-full mt-6" />
+          <div class="flex items-center w-full justify-between py-6 px-11">
+            <div class="flex flex-col items-center">
+              <span class="font-bold text-lg text-very-dark-desaturated-blue"
+                >80K</span
+              >
+              <span class="text-xs text-dark-gray tracking-widest"
+                >Followers</span
+              >
+            </div>
+            <div class="flex flex-col items-center">
+              <span class="font-bold text-lg text-very-dark-desaturated-blue"
+                >803K</span
+              >
+              <span class="text-xs text-dark-gray tracking-widest">Likes</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <span class="font-bold text-lg text-very-dark-desaturated-blue"
+                >1.4K</span
+              >
+              <span class="text-xs text-dark-gray tracking-widest">Photos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
